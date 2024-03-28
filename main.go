@@ -19,7 +19,7 @@ func main(){
 
 }
 
-func setupDatabase() *sql.DB{
+func setupDatabase(username, password string) *sql.DB{
 	psqlInfo := fmt.Sprintf("host=%s port=%d user=%s password=%s dbname=%s",
 	 host, port, username, password, dbname)
 	 db, err := sql.Open("postgres", psqlInfo)
